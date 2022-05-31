@@ -1,6 +1,6 @@
 import "./App.css";
 import {
-  BrowserRouter,
+  HashRouter,
   Routes,
   Route,
 } from "react-router-dom";
@@ -10,12 +10,12 @@ import SingleMovie from "./components/SingleMovie";
 const App = () => {
   return (
     <div className="app">
-      <BrowserRouter>
+      <HashRouter>
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/:id" element={<SingleMovie />} />
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </div>
   );
 };

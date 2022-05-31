@@ -9,7 +9,7 @@ const Index = () => {
     const [movies, setMovies] = useState([]);
 
     useEffect(() => {
-        const term = localStorage.getItem('searchTerm') != "" ? localStorage.getItem('searchTerm') : "Fast";
+        const term = localStorage.getItem('searchTerm') ? localStorage.getItem('searchTerm') : "Fast";
         setSearchTerm(term);
         searchMovies(term);
     }, []);

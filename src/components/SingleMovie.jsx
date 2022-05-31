@@ -17,7 +17,7 @@ export default function SingleMovie() {
     const getMovie = async (id) => {
         const response = await fetch(`${API_URL}&i=${id}`);
         const data = await response.json();
-        if (data.Response != "False")
+        if (data.Response !== "False")
             setMovie(data);
     };
 
